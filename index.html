@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN для Крыма – рабочий сервис для бесперебойного интернета без ограничений</title>
+    <meta name="description"
+        content="ВПН для Крыма без ограничений с пробным периодом – на Android, PC, iPhone. Оставайтесь на связи с близкими и родными – отечественный VPN, который работает в Крыму.">
+    <meta name="keywords"
+        content="какой впн работает в крыму, впн для крыма, рабочий впн в крыму, vpn для крыма, рабочий впн в крыму 2026, скачать впн для крыма, рабочий впн для андроид в крыму, какой vpn работает в крыму 2026">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a12;
+            --bg-card: #10101e;
+            --accent: #6c63ff;
+            --accent2: #a78bfa;
+            --green: #22c55e;
+            --text-main: #e8e8f0;
+            --text-muted: #8888aa;
+            --border-radius: 16px;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: var(--font-main);
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.125rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .label {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--accent2);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background: rgba(108, 99, 255, 0.1);
+            color: #fff;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 64px;
+            background: rgba(10, 10, 18, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: 1.25rem;
+            z-index: 1001;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            font-weight: 400;
+        }
+
+        .logo-text span {
+            color: var(--accent2);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent2);
+        }
+
+        .nav-links .btn {
+            padding: 8px 16px;
+            font-size: 0.875rem;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            z-index: 1001;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 2px;
+            background: var(--text-main);
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-dark);
+                flex-direction: column;
+                justify-content: center;
+                transition: right 0.4s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .burger.active div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .burger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .burger.active div:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        #hero {
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at 50% 30%, rgba(108, 99, 255, 0.15) 0%, transparent 60%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #hero .subtitle {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            color: var(--text-main);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .stat-item {
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+        }
+
+        .stat-item span {
+            color: var(--text-main);
+        }
+
+        .platforms-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background: var(--bg-card);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .stats-grid {
+                gap: 16px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 32px 24px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .seo-block {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .seo-block h3 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .seo-block h3:first-child {
+            margin-top: 0;
+        }
+
+        .seo-block h4 {
+            font-size: 1.5rem;
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1rem;
+        }
+
+        .seo-block p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .seo-block ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.05rem;
+        }
+
+        .seo-block li {
+            margin-bottom: 8px;
+        }
+
+        .seo-block strong {
+            color: var(--accent2);
+            display: block;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .seo-block strong:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .seo-block {
+                padding: 32px 24px;
+            }
+
+            .seo-block h3 {
+                font-size: 1.75rem;
+            }
+
+            .seo-block h4 {
+                font-size: 1.35rem;
+            }
+        }
+
+        .faq-block {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(108, 99, 255, 0.4);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .faq-question {
+            padding: 28px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            list-style: none;
+            /* Hide default marker */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+            background: rgba(108, 99, 255, 0.1);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .faq-item[open] {
+            background: rgba(108, 99, 255, 0.05);
+            border-color: rgba(108, 99, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(45deg);
+            color: #fff;
+            background: var(--accent);
+        }
+
+        .faq-answer {
+            padding: 0 28px 28px 28px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            text-align: center;
+        }
+
+        .step-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #cta-banner {
+            padding: 60px 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(167, 139, 250, 0.1));
+            border-top: 1px solid rgba(167, 139, 250, 0.2);
+            border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: var(--border-radius);
+        }
+
+        .cta-box h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2.25rem;
+        }
+
+        .badge-green.large {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--green);
+            border: 1px solid var(--green);
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 20px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cta-hint {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .cta-box h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .price-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .price-card:hover {
+            border-color: var(--accent);
+        }
+
+        .price-card.popular {
+            border-color: var(--accent);
+            transform: scale(1.03);
+            background: rgba(16, 16, 30, 0.8);
+            box-shadow: 0 10px 40px rgba(108, 99, 255, 0.15);
+        }
+
+        .price-card.popular::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--border-radius);
+            padding: 2px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #f97316, #ef4444);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+        }
+
+        .price-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-amount span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .price-total {
+            text-align: center;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .price-save {
+            text-align: center;
+            color: var(--green);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            min-height: 20px;
+        }
+
+        .price-list {
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .price-list li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            align-items: flex-start;
+        }
+
+        .price-list li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 800;
+        }
+
+        .pricing-footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-muted);
+        }
+
+        .pricing-footer a {
+            color: var(--accent2);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stars {
+            color: #facc15;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .author-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 900px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #guarantee {
+            background: var(--bg-dark);
+        }
+
+        .guarantee-box {
+            max-width: 680px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, rgba(108, 99, 255, 0.1) 0%, rgba(10, 10, 18, 0) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 24px;
+            padding: 48px 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .guarantee-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1;
+        }
+
+        .guarantee-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-box p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .gpill {
+            color: var(--green);
+            background: rgba(34, 197, 94, 0.1);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .guarantee-box {
+                padding: 32px 20px;
+            }
+        }
+
+        footer {
+            background: var(--bg-card);
+            padding: 40px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .footer-logo {
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-desc {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-platforms {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-copy {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <div class="logo-icon">🛡</div>
+                <div class="logo-text">Crimea<span>VPN</span></div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Преимущества</a>
+                <a href="#steps">Подключение</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-primary">Попробовать за 10 ₽</a>
+            </div>
+
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-badge">Работает в Крыму в 2026 году</div>
+                <h1>VPN для Крыма — <span class="gradient-text">рабочий и быстрый</span></h1>
+                <p class="subtitle">Открывай YouTube, Instagram и любые сайты без ограничений.<br>Один ВПН для всех
+                    устройств — Android, iPhone и ПК.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-primary">🚀 Попробовать за 10 ₽</a>
+                    <a href="#pricing" class="btn btn-outline">Смотреть тарифы</a>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item"><span>28+</span> стран</div>
+                    <div class="stat-item"><span>10 Гб/с</span> скорость</div>
+                    <div class="stat-item"><span>3 дня</span> пробный доступ за 10 ₽</div>
+                    <div class="stat-item"><span>∞</span> устройств</div>
+                </div>
+
+                <div class="platforms-pills">
+                    <div class="pill">🤖 Android</div>
+                    <div class="pill">🍎 iPhone</div>
+                    <div class="pill">🖥 Windows</div>
+                    <div class="pill">🍏 macOS</div>
+                    <div class="pill">📺 Smart TV</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="label">Почему мы</div>
+                    <h2>ВПН для Крыма, который реально работает</h2>
+                    <p class="subtitle">Разработан специально для условий, где обычные VPN не справляются</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Протоколы WireGuard и V2Ray</h3>
+                        <p>Современные протоколы устойчивы к блокировкам и дают максимальную скорость — стриминг и игры
+                            без лагов.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Серверы в 28+ странах</h3>
+                        <p>Россия, Европа, СНГ и не только. Всегда найдётся быстрый сервер рядом.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🇷🇺</div>
+                        <h3>Интерфейс на русском</h3>
+                        <p>Приложение полностью на русском языке — никаких лишних настроек.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔒</div>
+                        <h3>Нет логов — нет слежки</h3>
+                        <p>Не храним историю активности и не передаём данные третьим лицам.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📱</div>
+                        <h3>Все устройства сразу</h3>
+                        <p>Один аккаунт — неограниченное число устройств. Android, iPhone, ПК, роутер, Smart TV.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎮</div>
+                        <h3>YouTube, TikTok, игры</h3>
+                        <p>Без ограничений. Смотри, листай и играй без задержек и блокировок.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="steps">
+            <div class="container">
+                <div class="section-header">
+                    <div class="label">Быстрый старт</div>
+                    <h2>Подключиться за 2 минуты</h2>
+                    <p class="subtitle">Не нужно разбираться в настройках — всё уже сделано за тебя</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">1</div>
+                        <h3>Оформите доступ</h3>
+                        <p>Выберите тариф или начните с пробного периода — 3 дня за 10 ₽. Без скрытых платежей.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">2</div>
+                        <h3>Скачайте приложение</h3>
+                        <p>Android, iPhone или Windows — приложение есть для всех платформ.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">3</div>
+                        <h3>Нажмите «Подключиться»</h3>
+                        <p>Одна кнопка — и вы в сети без ограничений.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">4</div>
+                        <h3>Пользуйтесь свободно</h3>
+                        <p>YouTube, Instagram, игры, стриминг — всё работает быстро и стабильно.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-banner">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="label">Специальное предложение</div>
+                    <h2>Попробуй рабочий ВПН для Крыма прямо сейчас</h2>
+                    <div class="badge-green large">🎯 3 дня полного доступа за 10 ₽</div>
+                    <div class="cta-btn-wrapper">
+                        <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-primary"
+                            style="padding: 18px 36px; font-size: 1.1rem;">Попробовать за 10 ₽ &rarr;</a>
+                        <div class="cta-hint">После пробного периода — отмена в один клик</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <div class="label">Тарифы</div>
+                    <h2>Выбери удобный план</h2>
+                    <p class="subtitle">Чем дольше — тем выгоднее. Все тарифы включают неограниченное число устройств.
+                    </p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <div class="price-title">1 Месяц</div>
+                        <div class="price-amount">349 ₽<span>/мес</span></div>
+                        <div class="price-total">Итого: 349 ₽</div>
+                        <div class="price-save"></div>
+
+                        <ul class="price-list">
+                            <li>WireGuard + V2Ray</li>
+                            <li>Серверы в 28+ странах</li>
+                            <li>Неограниченно устройств</li>
+                            <li>Скорость до 10 Гб/с</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+
+                        <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-outline btn-block">Выбрать
+                            &rarr;</a>
+                    </div>
+
+                    <div class="price-card">
+                        <div class="price-badge">−25% выгода</div>
+                        <div class="price-title">3 Месяца</div>
+                        <div class="price-amount">260 ₽<span>/мес</span></div>
+                        <div class="price-total">Итого: 780 ₽ за 3 месяца</div>
+                        <div class="price-save">Экономия 267 ₽ vs 1 месяц</div>
+
+                        <ul class="price-list">
+                            <li>WireGuard + V2Ray</li>
+                            <li>Серверы в 28+ странах</li>
+                            <li>Неограниченно устройств</li>
+                            <li>Скорость до 10 Гб/с</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+
+                        <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-outline btn-block">Выбрать
+                            &rarr;</a>
+                    </div>
+
+                    <div class="price-card popular">
+                        <div class="price-badge">🔥 ХИТ — экономия 50%</div>
+                        <div class="price-title">1 Год</div>
+                        <div class="price-amount">175 ₽<span>/мес</span></div>
+                        <div class="price-total">Итого: 2 100 ₽ за год</div>
+                        <div class="price-save">Экономия 2 088 ₽ vs 1 месяц</div>
+
+                        <ul class="price-list">
+                            <li>WireGuard + V2Ray</li>
+                            <li>Серверы в 28+ странах</li>
+                            <li>Неограниченно устройств</li>
+                            <li>Скорость до 10 Гб/с</li>
+                            <li>Приоритетная поддержка</li>
+                        </ul>
+
+                        <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-primary btn-block">Выбрать
+                            &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="pricing-footer">
+                    Или начни с пробного периода — <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea">3 дня за 10 ₽</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="seo-content">
+            <div class="container">
+                <div class="seo-block">
+                    <h3>Зачем нужен VPN в Крыму</h3>
+                    <p>Жить в Крыму — значит каждый день сталкиваться с ограничениями, которых нет в остальной России.
+                        Из-за международных санкций здесь не работают десятки привычных сервисов: Google Play и App
+                        Store выдают ошибку при попытке скачать приложения, Zoom официально заблокирован, Telegram и
+                        WhatsApp периодически ограничивают по решению Роскомнадзора. YouTube, Instagram, зарубежные
+                        стриминговые платформы, онлайн-игры — всё это либо недоступно, либо работает нестабильно.</p>
+
+                    <p>Добавьте к этому ограничения мобильного интернета, которые действуют бессрочно, — и картина
+                        становится понятной: без VPN в Крыму сложно оставаться на связи с близкими, работать удалённо и
+                        просто пользоваться интернетом так, как это делает весь остальной мир.</p>
+
+                    <p>VPN решает эту проблему радикально: он скрывает ваш реальный IP-адрес, делая вас «невидимым» для
+                        санкционных фильтров, и открывает доступ ко всему интернету без исключений.</p>
+
+                    <h4>Как пользоваться</h4>
+                    <p>Всё намного проще, чем кажется. Никаких технических знаний не нужно.</p>
+
+                    <strong>Шаг 1. Оформите доступ</strong>
+                    <p>Выберите тариф или воспользуйтесь пробным периодом — 7 дней бесплатно, без привязки карты.</p>
+
+                    <strong>Шаг 2. Скачайте приложение</strong>
+                    <p>Доступно для Android, iPhone, Windows и macOS. Скачивается за секунды, интерфейс полностью на
+                        русском.</p>
+
+                    <strong>Шаг 3. Нажмите «Подключиться»</strong>
+                    <p>Одна кнопка — и вы уже в защищённой сети. Приложение само выберет быстрый сервер, но вы можете
+                        переключиться на любой вручную.</p>
+
+                    <strong>Шаг 4. Пользуйтесь без ограничений</strong>
+                    <p>YouTube, Telegram, Instagram, игры, рабочие сервисы — всё работает так, как должно. Без тормозов,
+                        без блокировок, без лишних настроек.</p>
+
+                    <p>Хотите защитить сразу все устройства дома? Настройте VPN на роутере — это займёт 15 минут, а
+                        дальше каждый телефон, ноутбук и телевизор в вашей сети будут автоматически защищены.</p>
+
+                    <h4>Возможности и преимущества</h4>
+
+                    <strong>Работает именно в Крыму</strong>
+                    <p>Мы знаем, с чем сталкиваются жители полуострова. Наши серверы и протоколы настроены под местные
+                        условия — VPN подключается стабильно даже при ограничениях мобильного интернета.</p>
+
+                    <strong>Современные протоколы — WireGuard и V2Ray</strong>
+                    <p>Не блокируются и не тормозят. WireGuard даёт максимальную скорость, V2Ray работает там, где
+                        другие протоколы уже не справляются.</p>
+
+                    <strong>Серверы в 28+ странах</strong>
+                    <p>Россия, Европа, СНГ — выбирайте нужный регион под любую задачу. Хотите смотреть зарубежный
+                        Netflix? Подключитесь к европейскому серверу за секунду.</p>
+
+                    <strong>Неограниченное число устройств</strong>
+                    <p>Один аккаунт — для всей семьи. Android, iPhone, ноутбук, роутер, Smart TV — подключайте всё без
+                        доплат.</p>
+
+                    <strong>Русскоязычный интерфейс и поддержка</strong>
+                    <p>Приложение на русском. Служба поддержки отвечает в течение часа — тоже по-русски.</p>
+
+                    <strong>Никаких логов</strong>
+                    <p>Мы не храним историю ваших подключений и не передаём данные третьим лицам. Ваша активность —
+                        только ваша.</p>
+
+                    <h4>Подключи сейчас и получи 7 дней бесплатно</h4>
+                    <p>Попробуйте без риска — 7 дней полного доступа совершенно бесплатно. Никакой привязки карты,
+                        никаких скрытых списаний. Просто скачайте приложение и убедитесь сами, что интернет в Крыму
+                        может работать нормально.</p>
+
+                    <p>Если не понравится — просто не продлевайте. Но мы уверены: уже через день вы забудете, что такое
+                        блокировки.</p>
+
+                    <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-primary"
+                        style="margin-top: 1.5rem;">&rarr; Скачать и получить 7 дней бесплатно</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div class="label">FAQ</div>
+                    <h2>Часто задаваемые вопросы</h2>
+                    <p class="subtitle">Ответы на самые популярные вопросы о работе сервиса в Крыму</p>
+                </div>
+
+                <div class="faq-block">
+                    <details class="faq-item">
+                        <summary class="faq-question">Законно ли использовать VPN в Крыму?<span
+                                class="faq-icon">+</span></summary>
+                        <div class="faq-answer">Да. Использование VPN в личных целях — для доступа к сайтам, общения и
+                            работы — не является нарушением закона для частных лиц. VPN-сервисами пользуются миллионы
+                            людей по всей России и в Крыму в том числе.</div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Почему обычные бесплатные VPN не работают в Крыму?<span
+                                class="faq-icon">+</span></summary>
+                        <div class="faq-answer">Большинство бесплатных сервисов используют устаревшие протоколы —
+                            OpenVPN или L2TP — которые легко обнаруживаются и блокируются. Кроме того, многие западные
+                            VPN-провайдеры сами отключают серверы для крымских IP-адресов из-за санкционных требований.
+                            Наш сервис использует протоколы WireGuard и V2Ray, которые маскируют VPN-трафик под обычный
+                            — их значительно сложнее заблокировать.</div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Упадёт ли скорость интернета при подключении через VPN?<span
+                                class="faq-icon">+</span></summary>
+                        <div class="faq-answer">При использовании современного протокола WireGuard потеря скорости
+                            составляет всего 5–10% — вы практически не заметите разницы. Смотреть видео в 4K, играть в
+                            онлайн-игры и работать в Zoom можно без задержек. Скорость заметно снижается только на очень
+                            старых устройствах или при использовании устаревших протоколов — мы их не используем.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <div class="label">Отзывы</div>
+                    <h2>Что говорят наши пользователи</h2>
+                    <p class="subtitle">Реальные отзывы людей, которые живут в Крыму и используют наш VPN каждый день
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">«Наконец-то нашла рабочий впн для Крыма! Перепробовала штук пять — все
+                            либо тормозили, либо вообще не подключались. Этот работает стабильно уже третий месяц.
+                            YouTube грузит мгновенно.»</p>
+                        <div class="review-author">
+                            <div class="avatar">А</div>
+                            <div class="author-info">
+                                <h4>Анна К.</h4>
+                                <p>Симферополь &middot; Android</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">«Взял подписку на год — очень выгодно вышло. Настроил на роутере, теперь
+                            весь дом защищён: телефоны, ноутбук, телевизор. Никаких лагов в играх, рекомендую.»</p>
+                        <div class="review-author">
+                            <div class="avatar">Д</div>
+                            <div class="author-info">
+                                <h4>Дмитрий В.</h4>
+                                <p>Севастополь &middot; Keenetic + ПК</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <p class="review-text">«Пользуюсь для TikTok и Instagram на айфоне. Работает без сбоев,
+                            интерфейс понятный — разобралась за минуту. Поддержка отвечает быстро, помогли с
+                            настройкой.»</p>
+                        <div class="review-author">
+                            <div class="avatar">М</div>
+                            <div class="author-info">
+                                <h4>Марина Г.</h4>
+                                <p>Ялта &middot; iPhone</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">«Наконец-то нормальный VPN для Крыма на русском! Другие сервисы — всё на
+                            английском, ничего не понятно. Здесь всё просто. Скачал, подключился — работает.»</p>
+                        <div class="review-author">
+                            <div class="avatar">С</div>
+                            <div class="author-info">
+                                <h4>Сергей П.</h4>
+                                <p>Керчь &middot; Windows</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">«Попробовал пробный период за 10 рублей — сразу купил годовую подписку.
+                            Скорость отличная, стримлю в 4K без буферизации. Лучший впн для Крыма из всех что пробовал.»
+                        </p>
+                        <div class="review-author">
+                            <div class="avatar">Е</div>
+                            <div class="author-info">
+                                <h4>Евгений Р.</h4>
+                                <p>Феодосия &middot; Android + Smart TV</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">«Работаю удалённо, VPN нужен постоянно. Перешла с другого сервиса — здесь
+                            заметно быстрее. Особенно радует, что один аккаунт на все устройства без доплат.»</p>
+                        <div class="review-author">
+                            <div class="avatar">О</div>
+                            <div class="author-info">
+                                <h4>Ольга Н.</h4>
+                                <p>Симферополь &middot; MacBook + iPhone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guarantee">
+            <div class="container">
+                <div class="guarantee-box">
+                    <div class="guarantee-icon">🛡️</div>
+                    <h2>Гарантия возврата денег</h2>
+                    <p>Мы уверены в качестве сервиса. Если что-то пойдёт не так — вернём деньги без лишних вопросов в
+                        течение 30 дней после оплаты.</p>
+                    <p>Не понравилось? Напишите в поддержку — и мы вернём полную сумму. Без бюрократии.</p>
+
+                    <div class="guarantee-pills">
+                        <div class="gpill">✓ 30 дней на возврат</div>
+                        <div class="gpill">✓ Без вопросов</div>
+                        <div class="gpill">✓ Полная сумма</div>
+                    </div>
+
+                    <a href="https://tuvp1.ru/5Sg5nF?sub1=vpncrimea" class="btn btn-primary">Попробовать без риска
+                        &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="#hero" class="logo footer-logo">
+                <div class="logo-icon">🛡</div>
+                <div class="logo-text">Crimea<span>VPN</span></div>
+            </a>
+            <div class="footer-desc">VPN для Крыма — рабочий сервис без ограничений в 2026 году.</div>
+            <div class="footer-platforms">Android &middot; iPhone &middot; Windows &middot; macOS &middot; Smart TV
+            </div>
+            <div class="footer-copy">© 2026 CrimeaVPN. Использование VPN в личных целях не запрещено.</div>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+        const links = navLinks.querySelectorAll('a');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
